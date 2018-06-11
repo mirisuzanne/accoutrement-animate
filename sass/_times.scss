@@ -41,7 +41,7 @@ $times: () !default;
 ///
 /// @param {string | length | list} $time -
 ///   The name of a time in your configuration (e.g. `fast`),
-///   or a base-size and adjustments to be made
+///   or a base-time and adjustments to be made
 ///   (e.g. `'fast' ('times': 2)`).
 ///   For the sake of consistent documentation,
 ///   I recommend keeping adjustments in the configuration

@@ -43,8 +43,8 @@ Quick Start: Animation
 Install the package with npm or yarn:
 
 ```bash
-npm install accoutrement-color
-yarn add accoutrement-color
+npm install accoutrement-animate
+yarn add accoutrement-animate
 ```
 
 Import the library:
@@ -57,6 +57,8 @@ Establish your timing and easing palettes:
 
 ```scss
 $times: (
+  'fast': 150ms,
+  'medium': 'fast' ('times': 2),
 );
 ```
 
@@ -64,6 +66,6 @@ Access your timing & easing from anywhere:
 
 ```scss
 .example {
-  border-color: easing('@@@');
+  transition-duration: time('fast');
 }
 ```

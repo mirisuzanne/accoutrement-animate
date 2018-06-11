@@ -1,6 +1,10 @@
 Accoutrement-Animate Changelog
 ==============================
 
+v0.1.1 - 06/11/2018
+-------------------
+- BUGFIX: Documentation typos…
+
 v0.1.0 - 06/11/2018
 -------------------
 - NEW: Initial setup, tests, docs, and function-handling utilities

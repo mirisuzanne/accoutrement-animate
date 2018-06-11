@@ -42,7 +42,7 @@
       <div class="project-title">
         <a href="index.html" rel="home" class="project-name">Accoutrement: Animate</a>
         
-          <span class="project-version">0.1.0</span>
+          <span class="project-version">0.1.1</span>
         
       </div>
     </header>
@@ -222,19 +222,21 @@ named media-queries, and a<span class="widont">&nbsp;</span>clearfix.</li>
 </ul>
 <h2 id="quick-start-animation">Quick Start: Animation</h2>
 <p>Install the package with npm or<span class="widont">&nbsp;</span>yarn:</p>
-<pre><code class="lang-bash">npm install accoutrement-color
-yarn add accoutrement-color
+<pre><code class="lang-bash">npm install accoutrement-animate
+yarn add accoutrement-animate
 </code></pre>
 <p>Import the library:</p>
 <pre><code class="lang-scss">@import '&lt;path-to&gt;/accoutrement-animate/sass/animate';
 </code></pre>
 <p>Establish your timing and easing<span class="widont">&nbsp;</span>palettes:</p>
 <pre><code class="lang-scss">$times: (
+  'fast': 150ms,
+  'medium': 'fast' ('times': 2),
 );
 </code></pre>
 <p>Access your timing &amp; easing from<span class="widont">&nbsp;</span>anywhere:</p>
 <pre><code class="lang-scss">.example {
-  border-color: easing('@@@');
+  transition-duration: time('fast');
 }
 </code></pre>
 
