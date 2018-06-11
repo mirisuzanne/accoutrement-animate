@@ -1,0 +1,44 @@
+{
+  "name": "accoutrement-animate",
+  "title": "Accoutrement: Animate",
+  "version": "0.1.0",
+  "description": "Sass animation management and utilities.",
+  "homepage": "http://oddbird.net/accoutrement-animate/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oddbird/accoutrement-animate.git"
+  },
+  "devDependencies": {
+    "beeper": "^1.1.1",
+    "chalk": "^2.3.2",
+    "fancy-log": "^1.3.2",
+    "gulp": "^4.0.0",
+    "gulp-sass-lint": "^1.3.4",
+    "mocha": "^5.0.5",
+    "sass-true": "^3.1.0",
+    "sassdoc": "^2.5.0",
+    "sassdoc-theme-herman": "^2.1.0"
+  },
+  "author": "Miriam Suzanne <miriam@oddbird.net>",
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "accoutrement",
+    "toolkit",
+    "animation",
+    "eyeglass-module"
+  ],
+  "eyeglass": {
+    "sassDir": "sass",
+    "exports": false,
+    "name": "accoutrement-animate",
+    "needs": "^1.0.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "commit": "npm test; gulp sasslint; gulp sassdoc"
+  },
+  "bugs": {
+    "url": "https://github.com/oddbird/accoutrement-animate/issues"
+  }
+}

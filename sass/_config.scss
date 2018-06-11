@@ -1,0 +1,45 @@
+/// # Configuration
+/// @group config
+
+
+// Functions
+// ---------
+/// Define any additional functions required
+/// to generate relataionships in timing.
+/// This is only necessary for newer versions of Sass,
+/// where functions are first-class,
+/// and can be captured using `get-function($name)`.
+///
+/// ```scss
+/// $functions: (
+///   'times': get-function('times'),
+///   'divide': get-function('divide'),
+/// );
+/// ```
+///
+/// @group config
+/// @type map
+/// @see $_LOCAL-ANIMATE-FUNCTIONS
+$functions: () !default;
+
+
+// Local Functions
+// ---------------
+/// These functions are defined internally,
+/// and can be called by name without first being captured
+/// using the Sass `get-function()` approach.
+///
+/// Don't make changes to this map directly.
+/// You can add your own named functions in the `$functions` map.
+///
+/// @access public
+/// @group config
+/// @see $functions
+///
+/// @type map
+$_LOCAL-ANIMATE-FUNCTIONS: ( // sass-lint:disable-line variable-name-format
+  'add', 'plus',
+  'minus', 'subtract',
+  'times', 'multiply',
+  'divide',
+);

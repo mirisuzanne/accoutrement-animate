@@ -1,0 +1,38 @@
+theme: 'herman'
+dest: docs/
+src: sass/
+
+display:
+  access:
+    - public
+
+groups:
+  'Public API':
+    config: Configuration
+    times: Durations & Delays
+    easing: Easings
+    animate: Transitions & Animations
+    math: Math Functions
+
+herman:
+  sass:
+    includepaths: ['sass']
+    includes: ['animate']
+  extraDocs:
+    - name: 'Changelog'
+      path: CHANGELOG.md
+    - name: 'Contributing'
+      path: CONTRIBUTING.md
+    - name: 'MIT License'
+      path: LICENSE
+  extraLinks:
+    - name: 'Accoutrement Color'
+      url: 'http://oddbird.net/accoutrement-color/'
+    - name: 'Accoutrement Init'
+      url: 'http://oddbird.net/accoutrement-init/'
+    - name: 'Accoutrement Layout'
+      url: 'http://oddbird.net/accoutrement-layout/'
+    - name: 'Accoutrement Scale'
+      url: 'http://oddbird.net/accoutrement-scale/'
+    - name: 'Accoutrement Type'
+      url: 'http://oddbird.net/accoutrement-type/'

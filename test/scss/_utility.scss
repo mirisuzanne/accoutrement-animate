@@ -1,0 +1,32 @@
+// Sass Utilities
+// ==============
+
+
+// Get Function
+// ------------
+@include describe('Get Function [function]') {
+  $test: _ac-animate-get-function('times');
+
+  @include it('Returns a function or function-name') {
+    @include assert-equal(
+      $test,
+      if(function-exists('get-function'), get-function('times'), 'times')
+    );
+  }
+
+  @include it('Returned function or name is callable') {
+    @include assert-equal(
+      call($test, 3, 2),
+      3 * 2
+    );
+  }
+
+  @if function-exists('get-function') {
+    @include it('Functions are returned without change') {
+      @include assert-equal(
+        _ac-animate-get-function('times'),
+        get-function('times')
+      );
+    }
+  }
+}

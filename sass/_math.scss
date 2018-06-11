@@ -1,0 +1,125 @@
+/// # Math Functions
+/// Use these internal math functions
+/// to adjust relative times in your map.
+/// @group math
+
+
+// Plus
+// ----
+/// Add two values together in a `$times` map.
+///
+/// @group math
+///
+/// @param {string | length} $time1 -
+///   The name or length of the time you are adding to
+/// @param {string | length} $time2 -
+///   The name or length of the time being added
+/// @return {number} -
+///   The calculated results of adding
+///   `$time1` and `$time2`
+@function plus(
+  $time1,
+  $time2
+) {
+  @return time($time1) + time($time2);
+}
+
+
+// Add
+// ---
+/// @alias plus
+/// @group math
+@function add(
+  $time1,
+  $time2
+) {
+  @return plus($time1, $time2);
+}
+
+
+
+// Minus
+// -----
+/// Subtract one value from another in a `$times` map.
+///
+/// @group math
+///
+/// @param {string | length} $time1 -
+///   The name or length of the time you are subtracting from
+/// @param {string | length} $time2 -
+///   The name or length of the time to subtract
+/// @return {number} -
+///   The calculated results of subtracting
+///   `$time2` from `$time1`
+@function minus(
+  $time1,
+  $time2
+) {
+  @return time($time1) - time($time2);
+}
+
+
+// Subtract
+// --------
+/// @alias minus
+/// @group math
+@function subtract(
+  $time1,
+  $time2
+) {
+  @return minus($time1, $time2);
+}
+
+
+// Times
+// -----
+/// Multiplty two values in a `$times` map.
+///
+/// @group math
+///
+/// @param {string | length} $time1 -
+///   The name or length of the time you are multiplying
+/// @param {string | length} $time2 -
+///   The name or length of the time to use as a multiple
+/// @return {number} -
+///   The calculated results of multiplying
+///   `$time1` by `$time2`
+@function times(
+  $time1,
+  $time2
+) {
+  @return time($time1) * time($time2);
+}
+
+
+// Multiply
+// --------
+/// @alias times
+/// @group math
+@function multiply(
+  $time1,
+  $time2
+) {
+  @return times($time1, $time2);
+}
+
+
+// Divide
+// ------
+/// Divide two values in a `$times` map.
+///
+/// @group math
+///
+/// @param {string | length} $time1 -
+///   The name or length of the time you are dividing
+/// @param {string | length} $time2 -
+///   The name or length of the time to use as a division
+/// @return {number} -
+///   The calculated results of dividing
+///   `$time1` by `$time2`
+@function divide(
+  $time1,
+  $time2
+) {
+  @return time($time1) / time($time2);
+}
