@@ -1,6 +1,15 @@
 Accoutrement-Animate Changelog
 ==============================
 
+v0.2.0 - UNRELEASED
+-------------------
+- NEW: Add support for managed easing functions
+  using the `$ease` variable for storage,
+  and `ease()` function for access.
+- NEW: `add-ease()` and `merge-ease()` functions
+  help with more detailed easing-map manipulations.
+- NEW: Provide a classic set of cubic-bezier easing functions by default.
+
 v0.1.1 - 06/11/2018
 -------------------
 - BUGFIX: Documentation typos…

@@ -1,4 +1,7 @@
-/// # Time Management
+/// # Durations & Delays
+/// Manage all your duration & delay patterns
+/// in a single place -
+/// with explicitly documented relationships.
 /// @group times
 
 
@@ -49,7 +52,7 @@ $times: () !default;
 /// @return {length} -
 ///   The calculated length of time
 @function time(
-  $time,
+  $time
 ) {
   @return _ac-animate-get-time($time);
 }

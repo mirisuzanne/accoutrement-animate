@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Durations &amp; Delays | Accoutrement: Animate Documentation</title>
+  <title>Easing &amp; Steps | Accoutrement: Animate Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -92,12 +92,12 @@
                 
   
     <li class="nav-item">
-      <a href="times.html" data-nav="is-active">Durations &amp;<span class="widont">&nbsp;</span>Delays</a>
+      <a href="times.html" data-nav="is-not-active">Durations &amp;<span class="widont">&nbsp;</span>Delays</a>
     </li>
   
   
     <li class="nav-item">
-      <a href="ease.html" data-nav="is-not-active">Easing &amp;<span class="widont">&nbsp;</span>Steps</a>
+      <a href="ease.html" data-nav="is-active">Easing &amp;<span class="widont">&nbsp;</span>Steps</a>
     </li>
   
   
@@ -176,11 +176,11 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Accoutrement: Animate</a> »
-    <strong>Durations &amp; Delays</strong>
+    <strong>Easing &amp; Steps</strong>
   </nav>
 
 
-        <div data-page="times">
+        <div data-page="ease">
           
   
     
@@ -205,10 +205,15 @@
 
   
     <div data-item-section="prose" class="text-block">
-      <h1 id="durations-delays">Durations &amp; Delays</h1>
-<p>Manage all your duration &amp; delay patterns
-in a single place -
-with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
+      <h1 id="easing-steps">Easing &amp; Steps</h1>
+<p>Whether you are using CSS-named easing,
+like <code>ease-in-out</code> and <code>linear</code>,
+or defining your own easing
+with <code>cubic-bezier()</code> and <code>steps()</code>/<code>frames()</code> –
+we’ll help you organize and standardize your values
+in a single location.
+We also provide a classic set of built-in easing functions,
+which you can rename, access, or override as<span class="widont">&nbsp;</span>desired.</p>
 
       
   
@@ -273,7 +278,7 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
 
 
 
-<section class="item" id="variable--times">
+<section class="item" id="variable--_ACCOUTREMENT-EASING">
   
     
   
@@ -291,7 +296,7 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
       
 
       
-        <a href="#variable--times" class="item-name">$times</a>
+        <a href="#variable--_ACCOUTREMENT-EASING" class="item-name">$_ACCOUTREMENT-EASING</a>
       
 
       
@@ -320,7 +325,211 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">$times: () !default;</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$_ACCOUTREMENT-EASING: ( // sass-lint:disable-line variable-name-format
+  &#39;in&#39;: ease-in,
+  &#39;out&#39;: ease-out,
+  &#39;in-out&#39;: ease-in-out,
+  &#39;in-quad&#39;: cubic-bezier(0.55, 0.085, 0.68, 0.53),
+  &#39;in-cubic&#39;: cubic-bezier(0.55, 0.055, 0.675, 0.19),
+  &#39;in-quart&#39;: cubic-bezier(0.895, 0.03, 0.685, 0.22),
+  &#39;in-quint&#39;: cubic-bezier(0.755, 0.05, 0.855, 0.06),
+  &#39;in-sine&#39;: cubic-bezier(0.47, 0, 0.745, 0.715),
+  &#39;in-expo&#39;: cubic-bezier(0.95, 0.05, 0.795, 0.035),
+  &#39;in-circ&#39;: cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  &#39;in-back&#39;: cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  &#39;out-quad&#39;: cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  &#39;out-cubic&#39;: cubic-bezier(0.215, 0.61, 0.355, 1),
+  &#39;out-quart&#39;: cubic-bezier(0.165, 0.84, 0.44, 1),
+  &#39;out-quint&#39;: cubic-bezier(0.23, 1, 0.32, 1),
+  &#39;out-sine&#39;: cubic-bezier(0.39, 0.575, 0.565, 1),
+  &#39;out-expo&#39;: cubic-bezier(0.19, 1, 0.22, 1),
+  &#39;out-circ&#39;: cubic-bezier(0.075, 0.82, 0.165, 1),
+  &#39;out-back&#39;: cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  &#39;in-out-quad&#39;: cubic-bezier(0.455, 0.03, 0.515, 0.955),
+  &#39;in-out-cubic&#39;: cubic-bezier(0.645, 0.045, 0.355, 1),
+  &#39;in-out-quart&#39;: cubic-bezier(0.77, 0, 0.175, 1),
+  &#39;in-out-quint&#39;: cubic-bezier(0.86, 0, 0.07, 1),
+  &#39;in-out-sine&#39;: cubic-bezier(0.445, 0.05, 0.55, 0.95),
+  &#39;in-out-expo&#39;: cubic-bezier(1, 0, 0, 1),
+  &#39;in-out-circ&#39;: cubic-bezier(0.785, 0.135, 0.15, 0.86),
+  &#39;in-out-back&#39;: cubic-bezier(0.68, -0.55, 0.265, 1.55),
+);</code></pre>
+    </div>
+  
+
+    
+  
+  
+  
+  
+
+  
+    <div class="text-block">
+      <p>A classic set of built-in easing functions,
+if you don’t want to define your own.
+Don’t edit this map directly,
+but feel free to reference these values
+from the user-defined <code>$ease</code> map.</p>
+
+      
+  
+
+      
+  
+
+      
+  
+
+    </div>
+  
+
+  </div>
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+
+  
+  
+
+
+  
+  
+  
+  
+    
+    
+  
+    
+  <div data-item-section="used-by">
+    
+      <h3 class="item-subtitle">
+        <span class="item-subtitle-main">Used By</span>
+        
+      </h3>
+    
+
+    
+      
+      
+        
+
+        
+          
+          
+  
+  
+  
+  
+  
+  
+
+  
+  <div class="param-list">
+    <h4 class="param-title">
+      <span class="item-type">@function</span>
+      
+        <span class="item-name">_ac-animate-get-easing()</span>
+      
+      
+      
+      <span class="item-note">[private]</span>
+    </h4>
+
+    
+  </div>
+
+
+        
+      
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+
+  
+  
+
+  
+  
+
+</section>
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+<section class="item" id="variable--ease">
+  
+    
+  
+  
+
+  
+  
+  
+  
+
+  <div data-item-section="header">
+    <h2 class="item-title">
+      
+        <span class="item-type"></span>
+      
+
+      
+        <a href="#variable--ease" class="item-name">$ease</a>
+      
+
+      
+
+      
+    </h2>
+
+    
+  
+
+
+    
+    
+    
+  
+    <div class="code-block">
+      
+        <div class="code-header">
+          <span class="code-language">
+            scss
+          </span>
+
+          
+        </div>
+      
+
+      
+      
+      <pre class="hljs-pre"><code class="lang-scss">$ease: () !default;</code></pre>
     </div>
   
 
@@ -333,24 +542,23 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
   
     <div class="text-block">
       <p>A variable storing the map of
-all timing globally-avialble on your project.
-Any times added to the <code>$times</code> map will be accesible
-to the <code>time()</code> function by<span class="widont">&nbsp;</span>default.</p>
-<p>Define each time with a <code>name</code>, <code>base-value</code>,
-and optional <code>adjustments</code>…</p>
-<pre><code>$times: (
-  'fast': &lt;base-value&gt;,
-  'slow': &lt;base-value&gt; ('&lt;function-name&gt;': '&lt;arguments&gt;'),
-  // will return: function-name($base-value, $arguments...)
+all easing globally-avialble on your project.
+Any easing added to the <code>$ease</code> map will be accesible
+to the <code>ease()</code> function by<span class="widont">&nbsp;</span>default.</p>
+<p>Define each easing with a <code>name</code> and <code>value</code>…</p>
+<pre><code>$ease: (
+  'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
+  'sidebar-in': ease-out,
+  'sidebar-out': 'in-back',
+  'modal-in': 'sidebar-in',
 );
 </code></pre>
 <ul>
-<li>Name your times anything – from abstractions like <code>fast</code>,
-to concrete patterns like <code>button-background-hover</code>.</li>
-<li>Base-values can be CSS-ready times,
-or references other times in the<span class="widont">&nbsp;</span>map.</li>
-<li>Adjustments are a nested map of functions and arguments,
-for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</li>
+<li>Name your easing anything –
+from abstractions like <code>elastic</code>,
+to concrete patterns like <code>sidebar-in</code>.</li>
+<li>Values can be CSS-ready easing functions,
+or references other easings in the<span class="widont">&nbsp;</span>map.</li>
 </ul>
 
       
@@ -408,10 +616,10 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
   
   <div class="param-list">
     <h4 class="param-title">
-      <span class="item-type">@function</span>
+      
       
         <a href="
-  times.html#function--time" class="item-name">time()</a>
+  ease.html#variable--ease" class="item-name">$ease</a>
       
       
       
@@ -463,7 +671,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
       <span class="item-type">@mixin</span>
       
         <a href="
-  times.html#mixin--add-times" class="item-name">add-times()</a>
+  ease.html#mixin--add-ease" class="item-name">add-ease()</a>
       
       
       
@@ -497,7 +705,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
     <h4 class="param-title">
       <span class="item-type">@function</span>
       
-        <span class="item-name">_ac-animate-get-time()</span>
+        <span class="item-name">_ac-animate-get-easing()</span>
       
       
       
@@ -507,10 +715,6 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
     
   </div>
 
-
-        
-      
-        
 
         
       
@@ -546,7 +750,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
 
 
 
-<section class="item" id="function--time">
+<section class="item" id="function--ease">
   
     
   
@@ -564,7 +768,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
       
 
       
-        <a href="#function--time" class="item-name">time()</a>
+        <a href="#function--ease" class="item-name">ease()</a>
       
 
       
@@ -585,7 +789,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
 
   
     <div class="text-block">
-      <p>Access a named time in your <code>$times</code> map.</p>
+      <p>Access a named easing function in your <code>$ease</code> map.</p>
 
       
   
@@ -631,22 +835,17 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
     <h4 class="param-title">
       
       
-        <span class="item-name">$time:</span>
+        <span class="item-name">$name:</span>
       
-      
-      <span class="value-type">(string | length |<span class="widont">&nbsp;</span>list)</span>
+      <span class="item-value">ease</span>
+      <span class="value-type">(string)</span>
       
     </h4>
 
     
       
       <div class="param-details text-block">
-        <p>The name of a time in your configuration (e.g. <code>fast</code>),
-or a base-time and adjustments to be made
-(e.g. <code>'fast' ('times': 2)</code>).
-For the sake of consistent documentation,
-I recommend keeping adjustments in the configuration
-whenever<span class="widont">&nbsp;</span>possible.</p>
+        <p>The name of an easing in your configuration (e.g. <code>elastic</code>).</p>
 
       </div>
     
@@ -675,7 +874,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
     
       
       <div class="param-details text-block">
-        <p>The calculated length of<span class="widont">&nbsp;</span>time</p>
+        <p>The pre-defined easing</p>
 
       </div>
     
@@ -703,8 +902,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
   
   
   
-    <div class="requires-wrapper">
-      
+    
     
   <div data-item-section="requires">
     
@@ -738,7 +936,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
     <h4 class="param-title">
       <span class="item-type">@function</span>
       
-        <span class="item-name">_ac-animate-get-time()</span>
+        <span class="item-name">_ac-animate-get-easing()</span>
       
       
       
@@ -755,166 +953,9 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
   </div>
 
   
-      
-  
     
-  <div data-item-section="used-by">
-    
-      <h3 class="item-subtitle">
-        <span class="item-subtitle-main">Used By</span>
-        
-      </h3>
-    
-
-    
-      
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
   
 
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  math.html#function--plus" class="item-name">plus()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-
-        
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  math.html#function--minus" class="item-name">minus()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-
-        
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  math.html#function--times" class="item-name">times()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-
-        
-      
-        
-
-        
-          
-          
-  
-  
-  
-  
-  
-  
-
-  
-  <div class="param-list">
-    <h4 class="param-title">
-      <span class="item-type">@function</span>
-      
-        <a href="
-  math.html#function--divide" class="item-name">divide()</a>
-      
-      
-      
-      
-    </h4>
-
-    
-  </div>
-
-
-        
-      
-        
-
-        
-      
-    
-  </div>
-
-  
-
-    </div>
   
 
   
@@ -942,7 +983,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
 
 
 
-<section class="item" id="mixin--add-times">
+<section class="item" id="mixin--add-ease">
   
     
   
@@ -960,7 +1001,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
       
 
       
-        <a href="#mixin--add-times" class="item-name">add-times()</a>
+        <a href="#mixin--add-ease" class="item-name">add-ease()</a>
       
 
       
@@ -981,10 +1022,10 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
 
   
     <div class="text-block">
-      <p>Merge individual time maps into the global <code>$times</code> variable,
-in case you want to define times in smaller groups
-such as <code>duration-times</code>, <code>delay-times</code>, etc
-before merging them into a single global<span class="widont">&nbsp;</span>times-palette.</p>
+      <p>Merge individual time maps into the global <code>$ease</code> variable,
+in case you want to define functions in smaller groups
+such as <code>fade-easing</code>, <code>slide-easing</code>, etc
+before merging them into a single global<span class="widont">&nbsp;</span>easing-palette.</p>
 
       
   
@@ -1073,7 +1114,7 @@ before merging them into a single global<span class="widont">&nbsp;</span>times-
       
       <div class="param-details text-block">
         <ul>
-<li>An updated global <code>$times</code> variable,
+<li>An updated global <code>$ease</code> variable,
 with new maps merged<span class="widont">&nbsp;</span>in.</li>
 </ul>
 
@@ -1135,7 +1176,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
       <span class="item-type">@function</span>
       
         <a href="
-  times.html#function--merge-times" class="item-name">merge-times()</a>
+  ease.html#function--merge-ease" class="item-name">merge-ease()</a>
       
       
       
@@ -1170,7 +1211,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
       
       
         <a href="
-  times.html#variable--times" class="item-name">$times</a>
+  ease.html#variable--ease" class="item-name">$ease</a>
       
       
       
@@ -1223,7 +1264,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
 
 
 
-<section class="item" id="function--merge-times">
+<section class="item" id="function--merge-ease">
   
     
   
@@ -1241,7 +1282,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
       
 
       
-        <a href="#function--merge-times" class="item-name">merge-times()</a>
+        <a href="#function--merge-ease" class="item-name">merge-ease()</a>
       
 
       
@@ -1262,13 +1303,13 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
 
   
     <div class="text-block">
-      <p>Merge multiple time maps into a single map,
-in case you want to define times in smaller groups –
-such as <code>duration-times</code>, <code>delay-times</code>, etc. –
+      <p>Merge multiple easing maps into a single map,
+in case you want to define easing in smaller groups –
+such as <code>fade-easing</code>, <code>slide-easing</code>, etc. –
 before merging them into a single<span class="widont">&nbsp;</span>map.</p>
-<p>This is like <code>add-times</code>,
+<p>This is like <code>add-ease</code>,
 but returns the combined map
-without assigning it to the <code>$times</code> variable.</p>
+without assigning it to the <code>$ease</code> variable.</p>
 
       
   
@@ -1353,7 +1394,7 @@ without assigning it to the <code>$times</code> variable.</p>
     
       
       <div class="param-details text-block">
-        <p>The merged map of<span class="widont">&nbsp;</span>times.</p>
+        <p>The merged map of<span class="widont">&nbsp;</span>easings.</p>
 
       </div>
     
@@ -1414,7 +1455,7 @@ without assigning it to the <code>$times</code> variable.</p>
       <span class="item-type">@mixin</span>
       
         <a href="
-  times.html#mixin--add-times" class="item-name">add-times()</a>
+  ease.html#mixin--add-ease" class="item-name">add-ease()</a>
       
       
       

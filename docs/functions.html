@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <title>Configuration | Accoutrement: Animate Documentation</title>
+  <title>Third-Party Functions | Accoutrement: Animate Documentation</title>
 
   <link href="assets/img/favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
@@ -92,19 +92,22 @@
                 
   
     <li class="nav-item">
-      <a href="config.html" data-nav="is-active">Configuration</a>
-    </li>
-  
-  
-    <li class="nav-item">
       <a href="times.html" data-nav="is-not-active">Durations &amp;<span class="widont">&nbsp;</span>Delays</a>
     </li>
   
   
+    <li class="nav-item">
+      <a href="ease.html" data-nav="is-not-active">Easing &amp;<span class="widont">&nbsp;</span>Steps</a>
+    </li>
   
   
     <li class="nav-item">
       <a href="math.html" data-nav="is-not-active">Math Functions</a>
+    </li>
+  
+  
+    <li class="nav-item">
+      <a href="functions.html" data-nav="is-active">Third-Party Functions</a>
     </li>
   </ul>
             </li></ul>
@@ -173,11 +176,11 @@
   <nav class="breadcrumb">
     
     <a href="index.html" >Accoutrement: Animate</a> »
-    <strong>Configuration</strong>
+    <strong>Third-Party Functions</strong>
   </nav>
 
 
-        <div data-page="config">
+        <div data-page="functions">
           
   
     
@@ -202,7 +205,14 @@
 
   
     <div data-item-section="prose" class="text-block">
-      <h1 id="configuration">Configuration</h1>
+      <h1 id="third-party-functions">Third-Party Functions</h1>
+<p>We provide a standard set of
+<a href="./math.html">math functions</a>
+for manipulating <a href="./times.html">time values</a>,
+but you can also use third-party (or Sass-native) functions.
+Because Sass 3.5+ requires first-class functions,
+we provide a single place to store &amp; manage functions
+that you would like to use with Accoutrement<span class="widont">&nbsp;</span>Animate.</p>
 
       
   
@@ -397,7 +407,7 @@ and can be captured using <code>get-function($name)</code>.</p>
       
       
         <a href="
-  config.html#variable--_LOCAL-ANIMATE-FUNCTIONS" class="item-name">$_LOCAL-ANIMATE-FUNCTIONS</a>
+  functions.html#variable--_LOCAL-ANIMATE-FUNCTIONS" class="item-name">$_LOCAL-ANIMATE-FUNCTIONS</a>
       
       
       
@@ -627,7 +637,7 @@ You can add your own named functions in the <code>$functions</code> map.</p>
       
       
         <a href="
-  config.html#variable--functions" class="item-name">$functions</a>
+  functions.html#variable--functions" class="item-name">$functions</a>
       
       
       

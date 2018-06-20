@@ -8,11 +8,10 @@ display:
 
 groups:
   'Public API':
-    config: Configuration
     times: Durations & Delays
-    easing: Easings
-    animate: Transitions & Animations
+    ease: Easing & Steps
     math: Math Functions
+    functions: Third-Party Functions
 
 herman:
   sass:

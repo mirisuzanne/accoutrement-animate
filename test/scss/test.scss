@@ -4,6 +4,11 @@
 @import '../../node_modules/sass-true/sass/true';
 @import '../../sass/animate';
 
+$ease: (
+  'sidebar-in': 'in-out-quad',
+  'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
+);
+
 $times: (
   'fast': 150ms,
   'math-tests': 2,
@@ -28,5 +33,6 @@ $times: (
 @import 'math';
 @import 'utility';
 @import 'times';
+@import 'easing';
 
 @include report;

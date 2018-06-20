@@ -1,5 +1,12 @@
-/// # Configuration
-/// @group config
+/// # Third-Party Functions
+/// We provide a standard set of
+/// [math functions](./math.html)
+/// for manipulating [time values](./times.html),
+/// but you can also use third-party (or Sass-native) functions.
+/// Because Sass 3.5+ requires first-class functions,
+/// we provide a single place to store & manage functions
+/// that you would like to use with Accoutrement Animate.
+/// @group functions
 
 
 // Functions
@@ -17,7 +24,7 @@
 /// );
 /// ```
 ///
-/// @group config
+/// @group functions
 /// @type map
 /// @see $_LOCAL-ANIMATE-FUNCTIONS
 $functions: () !default;
@@ -33,7 +40,7 @@ $functions: () !default;
 /// You can add your own named functions in the `$functions` map.
 ///
 /// @access public
-/// @group config
+/// @group functions
 /// @see $functions
 ///
 /// @type map
