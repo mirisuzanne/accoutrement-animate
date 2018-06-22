@@ -46,7 +46,7 @@
 // Add Times [mixin]
 // -----------------
 @include describe('Add Ease [mixin]') {
-  $old: $ease;
+  $old: $easing;
   $a: ('sidebar-in': 'in-out-quad');
   $b: ('elastic': 'in-out-back');
 
@@ -54,10 +54,10 @@
 
   @include it('Merges times, and updates global variable') {
     @include assert-equal(
-      $ease,
-      map-merge($ease, map-merge($a, $b))
+      $easing,
+      map-merge($easing, map-merge($a, $b))
     );
   }
 
-  $ease: $old !global;
+  $easing: $old !global;
 }

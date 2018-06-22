@@ -369,7 +369,7 @@ which you can rename, access, or override as<span class="widont">&nbsp;</span>de
 if you don’t want to define your own.
 Don’t edit this map directly,
 but feel free to reference these values
-from the user-defined <code>$ease</code> map.</p>
+from the user-defined <code>$easing</code> map.</p>
 
       
   
@@ -482,7 +482,7 @@ from the user-defined <code>$ease</code> map.</p>
 
 
 
-<section class="item" id="variable--ease">
+<section class="item" id="variable--easing">
   
     
   
@@ -500,7 +500,7 @@ from the user-defined <code>$ease</code> map.</p>
       
 
       
-        <a href="#variable--ease" class="item-name">$ease</a>
+        <a href="#variable--easing" class="item-name">$easing</a>
       
 
       
@@ -529,7 +529,7 @@ from the user-defined <code>$ease</code> map.</p>
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">$ease: () !default;</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$easing: () !default;</code></pre>
     </div>
   
 
@@ -543,10 +543,10 @@ from the user-defined <code>$ease</code> map.</p>
     <div class="text-block">
       <p>A variable storing the map of
 all easing globally-avialble on your project.
-Any easing added to the <code>$ease</code> map will be accesible
+Any easing added to the <code>$easing</code> map will be accesible
 to the <code>ease()</code> function by<span class="widont">&nbsp;</span>default.</p>
 <p>Define each easing with a <code>name</code> and <code>value</code>…</p>
-<pre><code>$ease: (
+<pre><code>$easing: (
   'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
   'sidebar-in': ease-out,
   'sidebar-out': 'in-back',
@@ -616,10 +616,10 @@ or references other easings in the<span class="widont">&nbsp;</span>map.</li>
   
   <div class="param-list">
     <h4 class="param-title">
-      
+      <span class="item-type">@function</span>
       
         <a href="
-  ease.html#variable--ease" class="item-name">$ease</a>
+  ease.html#function--ease" class="item-name">ease()</a>
       
       
       
@@ -789,7 +789,7 @@ or references other easings in the<span class="widont">&nbsp;</span>map.</li>
 
   
     <div class="text-block">
-      <p>Access a named easing function in your <code>$ease</code> map.</p>
+      <p>Access a named easing function in your <code>$easing</code> map.</p>
 
       
   
@@ -1022,7 +1022,7 @@ or references other easings in the<span class="widont">&nbsp;</span>map.</li>
 
   
     <div class="text-block">
-      <p>Merge individual time maps into the global <code>$ease</code> variable,
+      <p>Merge individual time maps into the global <code>$easing</code> variable,
 in case you want to define functions in smaller groups
 such as <code>fade-easing</code>, <code>slide-easing</code>, etc
 before merging them into a single global<span class="widont">&nbsp;</span>easing-palette.</p>
@@ -1114,7 +1114,7 @@ before merging them into a single global<span class="widont">&nbsp;</span>easing
       
       <div class="param-details text-block">
         <ul>
-<li>An updated global <code>$ease</code> variable,
+<li>An updated global <code>$easing</code> variable,
 with new maps merged<span class="widont">&nbsp;</span>in.</li>
 </ul>
 
@@ -1211,7 +1211,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
       
       
         <a href="
-  ease.html#variable--ease" class="item-name">$ease</a>
+  ease.html#variable--easing" class="item-name">$easing</a>
       
       
       
@@ -1309,7 +1309,7 @@ such as <code>fade-easing</code>, <code>slide-easing</code>, etc. –
 before merging them into a single<span class="widont">&nbsp;</span>map.</p>
 <p>This is like <code>add-ease</code>,
 but returns the combined map
-without assigning it to the <code>$ease</code> variable.</p>
+without assigning it to the <code>$easing</code> variable.</p>
 
       
   

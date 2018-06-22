@@ -232,14 +232,22 @@ yarn add accoutrement-animate
 <pre><code class="lang-scss">@import '&lt;path-to&gt;/accoutrement-animate/sass/animate';
 </code></pre>
 <p>Establish your timing and easing<span class="widont">&nbsp;</span>palettes:</p>
-<pre><code class="lang-scss">$times: (
+<pre><code class="lang-scss">$timing: (
   'fast': 150ms,
   'medium': 'fast' ('times': 2),
+);
+
+$easing: (
+  'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
+  'fade-in': 'in-out-quad',
 );
 </code></pre>
 <p>Access your timing &amp; easing from<span class="widont">&nbsp;</span>anywhere:</p>
 <pre><code class="lang-scss">.example {
-  transition-duration: time('fast');
+  animation: slide-in time('fast') ease('in-out-quad') 1 both;
+  transition-delay: time('fast');
+  transition-duration: time('medium');
+  transition-timing-function: ease('elastic');
 }
 </code></pre>
 

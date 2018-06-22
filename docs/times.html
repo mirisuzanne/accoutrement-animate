@@ -273,7 +273,7 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
 
 
 
-<section class="item" id="variable--times">
+<section class="item" id="variable--timing">
   
     
   
@@ -291,7 +291,7 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
       
 
       
-        <a href="#variable--times" class="item-name">$times</a>
+        <a href="#variable--timing" class="item-name">$timing</a>
       
 
       
@@ -320,7 +320,7 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
 
       
       
-      <pre class="hljs-pre"><code class="lang-scss">$times: () !default;</code></pre>
+      <pre class="hljs-pre"><code class="lang-scss">$timing: () !default;</code></pre>
     </div>
   
 
@@ -334,11 +334,11 @@ with explicitly documented<span class="widont">&nbsp;</span>relationships.</p>
     <div class="text-block">
       <p>A variable storing the map of
 all timing globally-avialble on your project.
-Any times added to the <code>$times</code> map will be accesible
+Any times added to the <code>$timing</code> map will be accesible
 to the <code>time()</code> function by<span class="widont">&nbsp;</span>default.</p>
 <p>Define each time with a <code>name</code>, <code>base-value</code>,
 and optional <code>adjustments</code>…</p>
-<pre><code>$times: (
+<pre><code>$timing: (
   'fast': &lt;base-value&gt;,
   'slow': &lt;base-value&gt; ('&lt;function-name&gt;': '&lt;arguments&gt;'),
   // will return: function-name($base-value, $arguments...)
@@ -585,7 +585,7 @@ for adjusting times directly in your<span class="widont">&nbsp;</span>palette.</
 
   
     <div class="text-block">
-      <p>Access a named time in your <code>$times</code> map.</p>
+      <p>Access a named time in your <code>$timing</code> map.</p>
 
       
   
@@ -981,7 +981,7 @@ whenever<span class="widont">&nbsp;</span>possible.</p>
 
   
     <div class="text-block">
-      <p>Merge individual time maps into the global <code>$times</code> variable,
+      <p>Merge individual time maps into the global <code>$timing</code> variable,
 in case you want to define times in smaller groups
 such as <code>duration-times</code>, <code>delay-times</code>, etc
 before merging them into a single global<span class="widont">&nbsp;</span>times-palette.</p>
@@ -1073,7 +1073,7 @@ before merging them into a single global<span class="widont">&nbsp;</span>times-
       
       <div class="param-details text-block">
         <ul>
-<li>An updated global <code>$times</code> variable,
+<li>An updated global <code>$timing</code> variable,
 with new maps merged<span class="widont">&nbsp;</span>in.</li>
 </ul>
 
@@ -1170,7 +1170,7 @@ with new maps merged<span class="widont">&nbsp;</span>in.</li>
       
       
         <a href="
-  times.html#variable--times" class="item-name">$times</a>
+  times.html#variable--timing" class="item-name">$timing</a>
       
       
       
@@ -1268,7 +1268,7 @@ such as <code>duration-times</code>, <code>delay-times</code>, etc. –
 before merging them into a single<span class="widont">&nbsp;</span>map.</p>
 <p>This is like <code>add-times</code>,
 but returns the combined map
-without assigning it to the <code>$times</code> variable.</p>
+without assigning it to the <code>$timing</code> variable.</p>
 
       
   

@@ -39,7 +39,7 @@
 // Add Times [mixin]
 // -----------------
 @include describe('Add Times [mixin]') {
-  $old: $times;
+  $old: $timing;
   $a: ('short': 150ms);
   $b: ('long': 2s);
 
@@ -47,10 +47,10 @@
 
   @include it('Merges times, and updates global variable') {
     @include assert-equal(
-      $times,
-      map-merge($times, map-merge($a, $b))
+      $timing,
+      map-merge($timing, map-merge($a, $b))
     );
   }
 
-  $times: $old !global;
+  $timing: $old !global;
 }

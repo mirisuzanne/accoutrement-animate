@@ -56,9 +56,14 @@ Import the library:
 Establish your timing and easing palettes:
 
 ```scss
-$times: (
+$timing: (
   'fast': 150ms,
   'medium': 'fast' ('times': 2),
+);
+
+$easing: (
+  'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
+  'fade-in': 'in-out-quad',
 );
 ```
 
@@ -66,6 +71,9 @@ Access your timing & easing from anywhere:
 
 ```scss
 .example {
-  transition-duration: time('fast');
+  animation: slide-in time('fast') ease('in-out-quad') 1 both;
+  transition-delay: time('fast');
+  transition-duration: time('medium');
+  transition-timing-function: ease('elastic');
 }
 ```

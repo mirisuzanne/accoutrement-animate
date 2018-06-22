@@ -9,14 +9,14 @@
 // ----------
 /// A variable storing the map of
 /// all timing globally-avialble on your project.
-/// Any times added to the `$times` map will be accesible
+/// Any times added to the `$timing` map will be accesible
 /// to the `time()` function by default.
 ///
 /// Define each time with a `name`, `base-value`,
 /// and optional `adjustments`…
 ///
 /// ```
-/// $times: (
+/// $timing: (
 ///   'fast': <base-value>,
 ///   'slow': <base-value> ('<function-name>': '<arguments>'),
 ///   // will return: function-name($base-value, $arguments...)
@@ -33,12 +33,12 @@
 /// @group times
 /// @see {function} time
 ///
-$times: () !default;
+$timing: () !default;
 
 
 // Time [function]
 // ---------------
-/// Access a named time in your `$times` map.
+/// Access a named time in your `$timing` map.
 ///
 /// @group times
 ///
@@ -60,7 +60,7 @@ $times: () !default;
 
 // Add Times
 // ---------
-/// Merge individual time maps into the global `$times` variable,
+/// Merge individual time maps into the global `$timing` variable,
 /// in case you want to define times in smaller groups
 /// such as `duration-times`, `delay-times`, etc
 /// before merging them into a single global times-palette.
@@ -70,12 +70,12 @@ $times: () !default;
 /// @parameter {map...} $maps -
 ///   Pass any number of maps to be merged.
 /// @output -
-///   An updated global `$times` variable,
+///   An updated global `$timing` variable,
 ///   with new maps merged in.
 @mixin add-times (
   $maps...
 ) {
-  $times: merge-times($times, $maps...) !global;
+  $timing: merge-times($timing, $maps...) !global;
 }
 
 
@@ -89,7 +89,7 @@ $times: () !default;
 ///
 /// This is like `add-times`,
 /// but returns the combined map
-/// without assigning it to the `$times` variable.
+/// without assigning it to the `$timing` variable.
 ///
 /// @group times
 ///
@@ -112,7 +112,7 @@ $times: () !default;
 
 // Get Time
 // --------
-/// Access a named times in your `$times` map.
+/// Access a named times in your `$timing` map.
 ///
 /// @access private
 ///
@@ -131,12 +131,12 @@ $times: () !default;
   $time
 ) {
   // Parse arguments
-  $time: map-get($times, $time) or $time;
+  $time: map-get($timing, $time) or $time;
   $base: nth($time, 1);
   $adjust: if(length($time) > 1, nth($time, 2), null);
 
   // Recursive check
-  $time: if(map-has-key($times, $base), _ac-animate-get-time($base), $base);
+  $time: if(map-has-key($timing, $base), _ac-animate-get-time($base), $base);
 
   // Adjustments
   @if $adjust {

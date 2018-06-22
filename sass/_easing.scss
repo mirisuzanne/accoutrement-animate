@@ -16,7 +16,7 @@
 /// if you don't want to define your own.
 /// Don't edit this map directly,
 /// but feel free to reference these values
-/// from the user-defined `$ease` map.
+/// from the user-defined `$easing` map.
 /// @group ease
 /// @access public
 $_ACCOUTREMENT-EASING: ( // sass-lint:disable-line variable-name-format
@@ -54,13 +54,13 @@ $_ACCOUTREMENT-EASING: ( // sass-lint:disable-line variable-name-format
 // ----------
 /// A variable storing the map of
 /// all easing globally-avialble on your project.
-/// Any easing added to the `$ease` map will be accesible
+/// Any easing added to the `$easing` map will be accesible
 /// to the `ease()` function by default.
 ///
 /// Define each easing with a `name` and `value`…
 ///
 /// ```
-/// $ease: (
+/// $easing: (
 ///   'elastic': cubic-bezier(0.5, -0.4, 0.5, 1.4),
 ///   'sidebar-in': ease-out,
 ///   'sidebar-out': 'in-back',
@@ -77,12 +77,12 @@ $_ACCOUTREMENT-EASING: ( // sass-lint:disable-line variable-name-format
 /// @group ease
 /// @see {function} ease
 ///
-$ease: () !default;
+$easing: () !default;
 
 
 // Ease [function]
 // ---------------
-/// Access a named easing function in your `$ease` map.
+/// Access a named easing function in your `$easing` map.
 ///
 /// @group ease
 ///
@@ -99,7 +99,7 @@ $ease: () !default;
 
 // Add Times
 // ---------
-/// Merge individual time maps into the global `$ease` variable,
+/// Merge individual time maps into the global `$easing` variable,
 /// in case you want to define functions in smaller groups
 /// such as `fade-easing`, `slide-easing`, etc
 /// before merging them into a single global easing-palette.
@@ -109,12 +109,12 @@ $ease: () !default;
 /// @parameter {map...} $maps -
 ///   Pass any number of maps to be merged.
 /// @output -
-///   An updated global `$ease` variable,
+///   An updated global `$easing` variable,
 ///   with new maps merged in.
 @mixin add-ease(
   $maps...
 ) {
-  $ease: merge-ease($ease, $maps...) !global;
+  $easing: merge-ease($easing, $maps...) !global;
 }
 
 
@@ -128,7 +128,7 @@ $ease: () !default;
 ///
 /// This is like `add-ease`,
 /// but returns the combined map
-/// without assigning it to the `$ease` variable.
+/// without assigning it to the `$easing` variable.
 ///
 /// @group ease
 ///
@@ -151,7 +151,7 @@ $ease: () !default;
 
 // Get Time
 // --------
-/// Access a named easing in your `$ease` map.
+/// Access a named easing in your `$easing` map.
 ///
 /// @access private
 ///
@@ -163,7 +163,7 @@ $ease: () !default;
   $name
 ) {
   // Merge defaults
-  $all: map-merge($_ACCOUTREMENT-EASING, $ease); // sass-lint:disable-line variable-name-format
+  $all: map-merge($_ACCOUTREMENT-EASING, $easing); // sass-lint:disable-line variable-name-format
 
   // Recursive check
   $name: map-get($all, $name) or $name;
